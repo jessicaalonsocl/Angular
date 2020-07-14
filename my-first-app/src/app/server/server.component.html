@@ -1,1 +1,5 @@
-<p>The Server Start Simple</p>
+<!-- [] quer dizer que queremos ligar alguma propriedade a essa diretiva -->
+<!-- ngStyle é uma diretiva de atributo adicionada como um atributo, neste caso, também usando a vinculação de propriedadas para configurá-los -->
+<!-- ngClass nos permiite adicionar dinamicamente ou remover classes CSS, se a condição for true (diretiva embutida)-->
+<p [ngStyle]="{backgroundColor: getColor()}"
+[ngClass]="{online: serverStatus === 'online'}">{{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }}</p>
